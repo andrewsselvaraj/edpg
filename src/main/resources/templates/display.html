@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Excel Data</title>
+</head>
+<body>
+    <h2>Excel Data</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th th:each="column : ${header}" th:text="${column}"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="row : ${data}">
+                <td th:each="cell, colStat : ${row}" th:text="${cell == '' ? '&nbsp;' : cell}">
+                   
+                    <input th:if="${colStat.index == 0 and cell == ''}" type="checkbox" disabled="disabled">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

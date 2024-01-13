@@ -1,0 +1,14 @@
+{
+  "name": "excel-to-mysql",
+  "version": "1.0.0",
+  "description": "Covert the excel sheet to sql file",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Rajesh W (wraejesh@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

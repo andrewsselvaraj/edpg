@@ -1,0 +1,7 @@
+{
+    "name": "dell/exceltomysql",
+    "description": "exceltomysql",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18"
+    }
+}

@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+=======
 <?php 
 
 session_start();
 if($_SESSION['login_election_user_name'])
 {
 ?>
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 
 <!DOCTYPE html>
 <html>
@@ -15,6 +18,77 @@ if($_SESSION['login_election_user_name'])
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
 
+<<<<<<< HEAD
+    <title>Election Data Management System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</head>
+
+
+<style>
+#shadowbox1 {
+           border: 1px solid;
+           padding: 20px;
+           box-shadow: 15px 10px 18px gray;
+           background: wheat;
+         }
+
+ 
+ 
+  .btn-primary {
+  color: #fff;
+  background-color: #D81159;
+  border-color: #D81159;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #8F2D56;
+  border-color: #8F2D56;
+}
+
+  
+</style>
+
+
+<body>
+
+<div class="jumbotron">
+  <h1 class="display-4">Hi there!</h1>
+  <p class="lead">Welcome to Election Data Management System!</p>
+  <hr class="my-4">
+  <p  class="lead">Please login to continue</p>
+
+  <div class="row">
+  <div class="col-6">
+<?php
+require 'vendor/autoload.php';
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+$spreadsheet = new Spreadsheet();
+$sheet = $spreadsheet->getActiveSheet();
+$sheet->setCellValue('A1', 'Hello World !');
+
+$writer = new Xlsx($spreadsheet);
+$writer->save('hello_world.xlsx');
+
+</div>
+<div class="col-6"></div>
+</div>
+  <!--
+  <a class="btn btn-primary btn-lg" href="ramnad.php" role="button">Ramnad</a>
+  <a class="btn btn-primary btn-lg" href="thiruvanandhapuram.php" role="button">Thiruvananthapuram</a>
+-->
+</div>
+
+</body>
+</html>
+=======
     <title>Election Data | Coimbatore</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -148,3 +222,4 @@ else
 ?>
 
 
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc

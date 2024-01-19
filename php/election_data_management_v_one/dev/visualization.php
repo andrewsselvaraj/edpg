@@ -50,6 +50,9 @@ div.card {
   text-align: center;
 }
 
+<<<<<<< HEAD
+
+=======
 .bar {
     background-color: #3498db;
     margin: 5px;
@@ -57,6 +60,7 @@ div.card {
     color: white;
     text-align: center;
 }
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 div.container {
   padding: 10px;
 }
@@ -188,6 +192,65 @@ div.container {
 </div>
 </center>
        
+<<<<<<< HEAD
+<br><br><br>
+
+
+        <div style="overflow-x:auto;">
+        <table class="table table-hover">
+            <thead>
+            <!--tr>
+                  <td><input type="text" ng-model="search.Election" placeholder="Search Election"></td>
+                  <td><input type="text" ng-model="search.Constituency" placeholder="Search Constituency"></td>
+                  <td><input type="text" ng-model="search.MP_AC" placeholder="Search MP_AC"></td>
+                  <td><input type="text" ng-model="search.State_AC" placeholder="Search State_AC"></td>
+                  <td><input type="text" ng-model="search.Polling_Station_No" placeholder="Search Polling_Station_No"></td>
+                  <td><input type="text" ng-model="search.Polling_areas" placeholder="Search Polling_areas"></td>
+                  <td><input type="text" ng-model="search.Candidate_Name" placeholder="Search Candidate_Name"></td>
+                  <td><input type="text" ng-model="search.Party_Name" placeholder="Search Party_Name"></td>
+                  <td><input type="text" ng-model="search.No_of_Votes" placeholder="Search No_of_Votes"></td>
+                </tr-->
+                <tr>
+                  <th class="hidden-th">Election</th>
+                  <th class="hidden-th">State</th>
+                  <th class="hidden-th">MP Constituency</th>
+                  <th class="hidden-th">Constituency</th>
+                  <!--th>MP AC</th>
+                  <th>State AC</th-->
+                  <th>Polling Station Number</th>
+                  <th>Polling Areas</th>
+                  <th>Candidate Name</th>
+                  <th>Party Name</th>
+                  <th>Number of votes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--tr ng-repeat="coimbatore in filteredUsers = (users | filter: searchText) | startFrom:(currentPage-1)*pageSize | limitTo:pageSize"-->
+               <tr ng-repeat="coimbatore in filteredUsers = (users | filter: globalSearch | filter: {Election: search.Election, state_name: search.state_name, MP_Constituency: search.MP_Constituency, Constituency: search.Constituency, MP_AC: search.MP_AC, State_AC: search.State_AC, Polling_Station_No: search.Polling_Station_No, Polling_areas: search.Polling_areas, Candidate_Name: search.Candidate_Name, Party_Name: search.Party_Name, No_of_Votes: search.No_of_Votes}) | startFrom:(currentPage-1)*pageSize | limitTo:pageSize">                  
+
+                    <td class="hidden-th">{{ coimbatore.Election }}</td>
+                    <td class="hidden-th"> {{ coimbatore.state_name }} </td>
+                    <td class="hidden-th">{{ coimbatore.MP_Constituency }} </td>
+                    <td class="hidden-th">{{ coimbatore.Constituency }}</td>
+                    <!--td>{{ coimbatore.MP_AC }}</td>
+                    <td>{{ coimbatore.State_AC }}</td-->
+                    <td>{{ coimbatore.Polling_Station_No }}</td>
+                    <td>{{ coimbatore.Polling_areas }}</td>
+                    <td>{{ coimbatore.Candidate_Name }}</td>
+                    <td>{{ coimbatore.Party_Name }}</td>
+                    <td>{{ coimbatore.No_of_Votes }}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+        <div>
+            <button ng-disabled="currentPage == 1" ng-click="prevPage()" class="btn btn-primary">Previous</button>
+            <span>Page {{currentPage}} of {{ numberOfPages() }}</span>
+            <button ng-disabled="currentPage >= numberOfPages()" ng-click="nextPage()" class="btn btn-primary">Next</button>
+        </div>
+    </div>
+
+=======
 
 <div class="chart-container">
 <div ng-repeat="coimbatore in users" class="bar" ng-style="width':{{coimbatore.No_of_Votes}}px">
@@ -206,6 +269,7 @@ div.container {
 
  
 
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 <!--
     <div>
     <ul class="pagination">
@@ -242,9 +306,13 @@ div.container {
             $scope.state_names = [];
             $scope.mp_constituencies = [];
             $scope.party_names = [];
+<<<<<<< HEAD
+
+=======
  $scope.calculateBarWidth = function(value) {
         return value + 'px';
     };
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 
     $http.get('data_services/cbe_constituency_info.php?action=getDistinctConstituencies')
         .then(function(response) {

@@ -78,7 +78,18 @@ div.container {
         <hr>
     
 
+        <input type="text" ng-model="searchText" placeholder="Search" class="form-control">
         <p>Results: <span class="badge bg-primary"> {{ filteredUsers.length }}/{{ users.length }} </span></p>
+
+
+        <a href="cbe_piechart.php" class="btn btn-primary">Show Pie Chart</a> 
+       <a href="#" class="btn btn-primary">Show Bar Chart</a>
+
+<br><br><br>
+
+
+        <p>Results: <span class="badge bg-primary"> {{ filteredUsers.length }}/{{ users.length }} </span></p>
+
 
 
        <center>

@@ -77,8 +77,24 @@ $conn->close();
         <h2>Voter Search:</h2>
         <p>Logged in user: <b><font color="#D81159"><?php echo $_SESSION['login_election_user_name']; ?> </font></b> </p>
         <hr>
+<<<<<<< HEAD
+        <input type="text" ng-model="globalSearch" placeholder="Global Search" class="form-control">
+        <p>Search Results: <span class="badge bg-primary"> {{ filteredUsers.length }}/{{ users.length }} </span></p>
 
 
+        <!--
+        <input type="text" ng-model="search.id_card_no" placeholder="Search ID">
+        <input type="text" ng-model="search.name_english" placeholder="Search Name">
+        <input type="text" ng-model="search.status" placeholder="Search status">
+-->
+
+       <a href="thiruvananthapuram_chart.php" class="btn btn-primary">Show Pie Chart</a> 
+       <a href="thiruvananthapuram_bar_chart.php" class="btn btn-primary">Show Bar Chart</a>
+
+=======
+
+
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 
         <div style="overflow-x:auto;">
         <table class="table table-hover">
@@ -86,6 +102,17 @@ $conn->close();
             <tr>
                   <td><input type="text" ng-model="search.id_card_no" placeholder="Search ID"></td>
                   <td><input type="text" ng-model="search.name_english" placeholder="Search Name"></td>
+<<<<<<< HEAD
+                  <td><input type="text" ng-model="search.name_malayalam" placeholder="Search Name"></td>
+                  <td><input type="text" ng-model="search.status" placeholder="Search Status"></td>
+                  <td><input type="text" ng-model="search.age" placeholder="Search Age"></td>
+                  <td><input type="text" ng-model="search.house_no_english" placeholder="Search House No."></td>
+                  <td><input type="text" ng-model="search.house_no_malayalam" placeholder="Search House No."></td>
+                  <td><input type="text" ng-model="search.serial_no" placeholder="Search Serial No."></td>
+                  <td><input type="text" ng-model="search.assembly" placeholder="Search Assembly"></td>
+                  <td><input type="text" ng-model="search.booth_in_malayalam" placeholder="Search Booth"></td>
+                  <td><input type="text" ng-model="search.guardians_name_in_malayalam" placeholder="Search Guardian Name"></td>
+=======
                   <td><input type="text" ng-model="search.name_reg_language" placeholder="Search Name"></td>
                   <td><input type="text" ng-model="search.status" placeholder="Search Status"></td>
                   <td><input type="text" ng-model="search.age" placeholder="Search Age"></td>
@@ -95,6 +122,7 @@ $conn->close();
                   <td><input type="text" ng-model="search.assembly" placeholder="Search Assembly"></td>
                   <td><input type="text" ng-model="search.booth_in_reg_language" placeholder="Search Booth"></td>
                   <td><input type="text" ng-model="search.guardians_name_in_reg_language" placeholder="Search Guardian Name"></td>
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
                   <td><input type="text" ng-model="search.constituency_id" placeholder="Search Constituency ID"></td>
                   <td><input type="text" ng-model="search.booth_id" placeholder="Search Booth ID"></td>
                   <td><input type="text" ng-model="search.s_id" placeholder="Search S ID"></td>
@@ -102,6 +130,17 @@ $conn->close();
                 <tr>
                   <th>Id Card Number</th>
                   <th>Name in English</th>
+<<<<<<< HEAD
+                  <th>Name in Malayalam</th>
+                  <th>Status</th>
+                  <th>Age</th>
+                  <th>House Number in English</th>
+                  <th>House Number in Malayalam</th>
+                  <th>Serial Number</th>
+                  <th>Assembly</th>
+                  <th>Booth in Malayalam</th>
+                  <th>Guardians name in Malayalam</th>
+=======
                   <th>Name in reg_language</th>
                   <th>Status</th>
                   <th>Age</th>
@@ -111,6 +150,7 @@ $conn->close();
                   <th>Assembly</th>
                   <th>Booth in reg_language</th>
                   <th>Guardians name in reg_language</th>
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
                   <th>Constituency ID</th>
                   <th>Booth ID</th>
                   <th>S ID</th>
@@ -123,6 +163,20 @@ $conn->close();
             
 
 
+<<<<<<< HEAD
+            <tr ng-repeat="thiruvananthapuram in filteredUsers = (users | filter: globalSearch | filter: {id_card_no: search.id_card_no, name_english: search.name_english, name_malayalam: search.name_malayalam, status: search.status, age: search.age, house_no_english: search.house_no_english, house_no_malayalam: search.house_no_malayalam, serial_no: search.serial_no, assembly: search.assembly, booth_in_malayalam: search.booth_in_malayalam, guardians_name_in_malayalam: search.guardians_name_in_malayalam, constituency_id: search.constituency_id, booth_id: search.booth_id, s_id: search.s_id}) | startFrom:(currentPage-1)*pageSize | limitTo:pageSize">                  
+                    <td>{{ thiruvananthapuram.election_id }} {{ thiruvananthapuram.id_card_no }}</td>
+                    <td>{{ thiruvananthapuram.name_english }}</td>
+                    <td>{{ thiruvananthapuram.name_malayalam }}</td>
+                    <td>{{ thiruvananthapuram.status }}</td>
+                    <td>{{ thiruvananthapuram.age }}</td>
+                    <td>{{ thiruvananthapuram.house_no_english }}</td>
+                    <td>{{ thiruvananthapuram.house_no_malayalam }}</td>
+                    <td>{{ thiruvananthapuram.serial_no }}</td>
+                    <td>{{ thiruvananthapuram.assembly }}</td>
+                    <td>{{ thiruvananthapuram.booth_in_malayalam }}</td>
+                    <td>{{ thiruvananthapuram.guardians_name_in_malayalam }}</td>
+=======
             <tr ng-repeat="thiruvananthapuram in filteredUsers = (users | filter: globalSearch | filter: {id_card_no: search.id_card_no, name_english: search.name_english, name_reg_language: search.name_reg_language, status: search.status, age: search.age, house_no_english: search.house_no_english, house_no_reg_language: search.house_no_reg_language, serial_no: search.serial_no, assembly: search.assembly, booth_in_reg_language: search.booth_in_reg_language, guardians_name_in_reg_language: search.guardians_name_in_reg_language, constituency_id: search.constituency_id, booth_id: search.booth_id, s_id: search.s_id}) | startFrom:(currentPage-1)*pageSize | limitTo:pageSize">                  
                     <td>{{ thiruvananthapuram.election_id }} {{ thiruvananthapuram.id_card_no }}</td>
                     <td>{{ thiruvananthapuram.name_english }}</td>
@@ -135,6 +189,7 @@ $conn->close();
                     <td>{{ thiruvananthapuram.assembly }}</td>
                     <td>{{ thiruvananthapuram.booth_in_reg_language }}</td>
                     <td>{{ thiruvananthapuram.guardians_name_in_reg_language }}</td>
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
                     <td>{{ thiruvananthapuram.constituency_id }}</td>
                     <td>{{ thiruvananthapuram.booth_id }}</td>
                     <td>{{ thiruvananthapuram.s_id }}</td>

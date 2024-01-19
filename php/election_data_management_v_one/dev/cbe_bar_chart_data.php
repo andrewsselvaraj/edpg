@@ -1,7 +1,9 @@
 <?php
 include('election_db_connect/election_db_connect.php'); 
 
+
 $sql = "SELECT Polling_Station_No, Candidate_Name, No_of_Votes, Party_Name, Constituency FROM cbe_mp_consituency_result_2019";
+
 $result = $conn->query($sql);
 
 $data = array();

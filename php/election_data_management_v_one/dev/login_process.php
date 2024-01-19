@@ -15,8 +15,14 @@ if(isset($_POST['submit']))
             
 			echo "<h1>Redirecting...Please Wait..!</h1>";
             //echo "<script>alert('Login Successful..!')</script>";
+<<<<<<< HEAD
 		   	echo "<script>location.href='thiruvanandhapuram.php'</script>";
 						     
+=======
+
+		   	echo "<script>location.href='coimbatore.php'</script>";
+
+>>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 
 	}
 	else {

@@ -50,17 +50,7 @@ div.card {
   text-align: center;
 }
 
-<<<<<<< HEAD
 
-=======
-.bar {
-    background-color: #3498db;
-    margin: 5px;
-    padding: 5px;
-    color: white;
-    text-align: center;
-}
->>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 div.container {
   padding: 10px;
 }
@@ -192,7 +182,6 @@ div.container {
 </div>
 </center>
        
-<<<<<<< HEAD
 <br><br><br>
 
 
@@ -250,26 +239,6 @@ div.container {
         </div>
     </div>
 
-=======
-
-<div class="chart-container">
-<div ng-repeat="coimbatore in users" class="bar" ng-style="width':{{coimbatore.No_of_Votes}}px">
-    {{ coimbatore.No_of_Votes }}  {{ coimbatore.Party_Name }} 
-</div>
- </div>
-
-    </div>
-
-              <div ng-repeat="coimbatore in filteredUsers = (users | filter: globalSearch | filter: {Election: search.Election, state_name: search.state_name, MP_Constituency: search.MP_Constituency, Constituency: search.Constituency, MP_AC: search.MP_AC, State_AC: search.State_AC, Polling_Station_No: search.Polling_Station_No, Polling_areas: search.Polling_areas, Candidate_Name: search.Candidate_Name, Party_Name: search.Party_Name, No_of_Votes: search.No_of_Votes}) | startFrom:(currentPage-1)*pageSize | limitTo:pageSize">                  
-
- 		<div class="bar" ng-style="{width: coimbatore.No_of_Votes + '%'}">uiouoiuoiu {{ coimbatore.No_of_Votes }}</div>
-                </div>
-
-
-
- 
-
->>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 <!--
     <div>
     <ul class="pagination">
@@ -306,13 +275,7 @@ div.container {
             $scope.state_names = [];
             $scope.mp_constituencies = [];
             $scope.party_names = [];
-<<<<<<< HEAD
 
-=======
- $scope.calculateBarWidth = function(value) {
-        return value + 'px';
-    };
->>>>>>> 3a89cd1bacade0dde2fa5e1f4b65494b0e8298fc
 
     $http.get('data_services/cbe_constituency_info.php?action=getDistinctConstituencies')
         .then(function(response) {

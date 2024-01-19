@@ -24,29 +24,38 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
-        <!--
-        <li class="nav-item">
-          <a class="nav-link" href="#">Constituencies</a>
-        </li>
--->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Constituencies
+           Election Data - Analysis
           </a>
           <ul class="dropdown-menu">
-            <!--li><a class="dropdown-item" href="ramnad.php">Ramnad</a></li-->
-            <li><a class="dropdown-item" href="thiruvanandhapuram.php">Voter Search</a></li>
-            <li><a class="dropdown-item" href="coimbatore.php">Coimbatore</a></li>
-            
-            <li><hr class="dropdown-divider"></li>
+	    <li><a class="dropdown-item" href="coimbatore.php">Coimbatore</a></li>
+            <li><a class="dropdown-item" href="ramnad.php">Ramnad</a>
+	    <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">About data</a></li>
           </ul>
         </li>
-        <!--
+
+
+
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link active" aria-current="page" href="votersinformation.php">Voter Information</a>
         </li>
--->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="boothmanagement.php">Booth Management</a>
+
+
+        </li>
+
+<li class="nav-item">
+         
+<a class="nav-link active" aria-current="page" href="visualization.php">Visulization</a>
+
+        </li>
+
+	<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="others.php">Others</a>
+        </li>
       </ul>
       
       <!--form class="d-flex" role="search"-->
